@@ -6,16 +6,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image : url(../img/home1.jpg);
+    background-image : url(../img/home2.jpg);
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 30px;
     padding-top: 60px;
     padding-bottom: 40px;
     font-weight: bold;
-    color: green;
+    color: rgb(231, 31, 238);
 }
 
 .list {

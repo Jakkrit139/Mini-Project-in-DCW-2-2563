@@ -106,7 +106,7 @@ router.get("/", (req, res, next) => {
   res.send("Respond without authentication");
 });
 
-  let pets = {
+  let students = {
       list: [
         { "id": 1, "name": "Jakkrit","surname": "Krngkaijak","major": "COE" ,"GPA": 2.25 },
         { "id": 2, "name": "Adam","surname": "Doloh","major": "COE" ,"GPA": 2.19 }]
@@ -114,51 +114,51 @@ router.get("/", (req, res, next) => {
   
   
   router
-    .route("/pets")
+    .route("/students")
     .get((req, res) => {
-      res.send(pets);
+      res.send(students);
     })
     .post((req, res) => {
       console.log(req.body);
       let newstudent = {};
-      newstudent.id = pets.list.length ? pets.list[pets.list.length - 1].id + 1 : 1;
+      newstudent.id = students.list.length ? students.list[students.list.length - 1].id + 1 : 1;
       newstudent.name = req.body.name;
       newstudent.surname= req.body.surname;
       newstudent.major = req.body.major;
       newstudent.GPA= req.body.GPA;
-      pets = { list: [...pets.list, newstudent] };
-      res.json(pets);
+      students = { list: [...students.list, newstudent] };
+      res.json(students);
     });
   
   router
-    .route("/pets/:studentid")
+    .route("/students/:studentid")
     .get((req, res) => {
-      let id = pets.list.findIndex((item) => +item.id == +req.params.studentid)
-      res.json(pets.list[id]);
+      let id = students.list.findIndex((item) => +item.id == +req.params.studentid)
+      res.json(students.list[id]);
     })
     .put((req, res) => {
-      let id = pets.list.findIndex((item) => item.id == +req.params.studentid);
-      pets.list[id].name = req.body.name;
-      pets.list[id].surname = req.body.surname;
-      pets.list[id].major = req.body.major;
-      pets.list[id].GPA = req.body.GPA;
-      res.json(pets.list);
+      let id = students.list.findIndex((item) => item.id == +req.params.studentid);
+      students.list[id].name = req.body.name;
+      students.list[id].surname = req.body.surname;
+      students.list[id].major = req.body.major;
+      students.list[id].GPA = req.body.GPA;
+      res.json(students.list);
     })
     .delete((req, res) => {
-      pets.list = pets.list.filter((item) => +item.id !== +req.params.studentid);
-      res.json(pets.list);
+      students.list = students.list.filter((item) => +item.id !== +req.params.studentid);
+      res.json(students.list);
     });
   
   
   router.route("/purchase/:studentId")
   .post((req,res) => {
-    let id = pets.list.findIndex((item) => +item.id == +req.params.studentId)
+    let id = students.list.findIndex((item) => +item.id == +req.params.studentId)
     if (id == -1) {
       res.json({message: "Student not found"})
     }
     else {
-      pets.list = pets.list.filter((item) => +item.id !== +req.params.studentId);
-      res.json(pets.list);
+      students.list = students.list.filter((item) => +item.id !== +req.params.studentId);
+      res.json(students.list);
     }
   })
 

@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import styles from '../styles/Home.module.css'
+ 
+    const Navbar = () => (
 
-const Navbar = () => (
-    <div>
+    <div className ={styles.ul}>
         <Link href="/"><a> <b>Home </b></a></Link> |
         <Link href="/register"><a> <b>Register</b> </a></Link>  |
         <Link href="/login"><a> <b>Login</b> </a></Link> |
@@ -10,7 +12,10 @@ const Navbar = () => (
         <Link href="/studentedit"><a> <b>Student Edit</b> </a></Link> |
         <Link href="/getConfig"><a><b> Config</b> </a></Link> | 
         <Link href="/logout"><a> <b>Logout</b> </a></Link> 
-        
+    
+      
+  
+      
     </div>
 )
 

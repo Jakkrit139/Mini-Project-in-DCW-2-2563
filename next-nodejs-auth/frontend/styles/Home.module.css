@@ -143,9 +143,9 @@
   }
   
   .navbar {
-    font-size: 18px;
+    font-size: 35px;
     background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(255, 255, 255);
     padding-bottom: 10px;
   }
   

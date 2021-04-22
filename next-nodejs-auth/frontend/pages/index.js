@@ -24,10 +24,10 @@ const index = () => {
       return data.list.map((item, index) => {
         return (
           <div className={styles.listItem} key={index}>
-            <div><b>Name:</b> {item.name}</div>
-            <div><b>Surname:</b> {item.surname}</div>
-             <div> <b>Major:</b> {item.major} </div>
-            <div><b>GPA:</b> {item.GPA}</div>
+            <div><b>ชื่อ:</b> {item.name}</div>
+            <div><b>สายพันธ์ุ:</b> {item.species}</div>
+             <div> <b>เพศ:</b> {item.sex} </div>
+            <div><b>อายุ:</b> {item.age}</div>
             
             <div>
             <button

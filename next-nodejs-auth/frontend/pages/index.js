@@ -53,6 +53,7 @@ const index = () => {
       <marquee bgcolor="" direction="lefe" scrollamount="2" width="100%"><ins> Lovely Pets Let's GO</ins></marquee></div>
       <div className={styles.list}>
         {showStudents()}
+        
       </div>
       
     </div>

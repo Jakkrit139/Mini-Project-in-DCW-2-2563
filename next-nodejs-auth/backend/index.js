@@ -108,8 +108,8 @@ router.get("/", (req, res, next) => {
 
   let students = {
       list: [
-        { "id": 1, "name": "Jakkrit","surname": "Krngkaijak","major": "COE" ,"GPA": 2.25 },
-        { "id": 2, "name": "Adam","surname": "Doloh","major": "COE" ,"GPA": 2.19 }]
+        { "id": 1, "name": "Jakkrit","surname": "Krngkaijak","sex": "COE" ,"age": 2.25 },
+        { "id": 2, "name": "Adam","surname": "Doloh","sex": "COE" ,"age": 2.19 }]
     }
   
   
@@ -124,8 +124,8 @@ router.get("/", (req, res, next) => {
       newstudent.id = students.list.length ? students.list[students.list.length - 1].id + 1 : 1;
       newstudent.name = req.body.name;
       newstudent.surname= req.body.surname;
-      newstudent.major = req.body.major;
-      newstudent.GPA= req.body.GPA;
+      newstudent.sex = req.bodyagex;
+      newagedent.GPA= req.body.GPA;
       students = { list: [...students.list, newstudent] };
       res.json(students);
     });
@@ -140,8 +140,8 @@ router.get("/", (req, res, next) => {
       let id = students.list.findIndex((item) => item.id == +req.params.studentid);
       students.list[id].name = req.body.name;
       students.list[id].surname = req.body.surname;
-      students.list[id].major = req.body.major;
-      students.list[id].GPA = req.body.GPA;
+      students.list[id].sex = req.bodyagex;
+      stuagets.list[id].GPA = req.body.GPA;
       res.json(students.list);
     })
     .delete((req, res) => {

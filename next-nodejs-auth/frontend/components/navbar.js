@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
- 
+
+
     const Navbar = () => (
 
-    <div className ={styles.ul}>
+    <div className ={styles.navbar}>
         <Link href="/"><a> <b>Home </b></a></Link> |
         <Link href="/register"><a> <b>Register</b> </a></Link>  |
         <Link href="/login"><a> <b>Login</b> </a></Link> |
@@ -13,9 +14,7 @@ import styles from '../styles/Home.module.css'
         <Link href="/getConfig"><a><b> Config</b> </a></Link> | 
         <Link href="/logout"><a> <b>Logout</b> </a></Link> 
     
-      
-  
-      
+    
     </div>
 )
 

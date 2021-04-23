@@ -108,26 +108,26 @@ const admin = ({ token }) => {
       <Navbar />
       <h1><ins>Student Data Edit </ins></h1>
       <div className={styles.form_add}>
-        <h2>Add Students</h2>
-        Name:
+        <h2>Add </h2>
+        ชื่อ :
         <input
           type="text"
           name="name"
           onChange={(e) => setName(e.target.value)}
         ></input>
-        Surname:
+        สายพันธ์ุ :
         <input
           type="text"
           name="surname"
           onChange={(e) => setSurname(e.target.value)}
         ></input>
-        Major:
+        เพศ:
         <input
           type="text"
           name="major"
           onChange={(e) => setMajor(e.target.value)}
         ></input>
-        GPA:
+        อายุ:
         <input
           type="number"
           name="GPA"

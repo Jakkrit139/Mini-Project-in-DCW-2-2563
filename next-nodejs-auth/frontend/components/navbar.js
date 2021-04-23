@@ -13,8 +13,6 @@ import styles from '../styles/Home.module.css'
         <Link href="/studentedit"><a> <b>Student Edit</b> </a></Link> |
         <Link href="/getConfig"><a><b> Config</b> </a></Link> | 
         <Link href="/logout"><a> <b>ออกจากระบบ</b> </a></Link> 
-
-
     </div>
 )
 

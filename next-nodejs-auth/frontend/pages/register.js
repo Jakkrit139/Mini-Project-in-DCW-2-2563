@@ -87,7 +87,7 @@ export default function Register({ token }) {
                 </button>
                 </div>
                 <br />
-            <b>Status: </b> <i>{status}</i>
+             <b>Status: </b> <i>{status}</i>
                 <br /><br />
                 <div className={styles.content}>
                     {registerForm()}

@@ -75,17 +75,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 10px solid blue;
-  background-color: antiquewhite;
+  /* border: 10px solid blue; */
+  /* background-color: antiquewhite; */
+  background-image: url(../img/woman-3077180_1280.jpg);
 }
 .listItem {
   display: flex;
   flex-direction: column;
   margin: 20px;
   padding: 10px;
-  border: 2px solid green;
+  border: 2px solid rgb(22, 22, 22);
   font-size: 1.4rem;
   text-align: center;
+  
 }
 .form_add {
   display: flex;

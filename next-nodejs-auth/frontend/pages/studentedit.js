@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/student.module.css";
 import withAuth from "../components/withAuth";
 import Navbar from "../components/navbar";
+import Footer from  "../components/footer";
 const URL = "http://localhost/api/students";
 const admin = ({ token }) => {
   const [user, setUser] = useState({});
@@ -143,6 +144,7 @@ const admin = ({ token }) => {
 
       <div className={styles.list}>{showStudents()}</div>
       <div className={styles.list1}><b><i><ins>(selected student)</ins></i></b> <b>  Name:</b>{student.name}<b>  Surname:</b>{student.surname} <b>  Major:</b>{student.major}  <b>GPA:</b>{student.GPA}</div>
+      <Footer />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import axios from "axios";
 import React, { } from "react";
 import styles from "../styles/Index.module.css";
 import Navbar from "../components/navbar";
+import Footer from  "../components/footer";
 const URL = "http://localhost/api/students";
 const URL_SEL = "http://localhost/api/purchase";
 const fetcher = (key) => fetch(key).then((res) => res.json());
@@ -55,7 +56,7 @@ const index = () => {
         {showStudents()}
         
       </div>
-      
+      <Footer />
     </div>
     </Layout>
   );

@@ -50,7 +50,7 @@ const index = () => {
     </Head>
     <div className={styles.container}><Navbar />
       <div className={styles.title}>
-      <marquee bgcolor="" direction="lefe" scrollamount="2" width="100%"><ins> Lovely Pets Let's GO</ins></marquee></div>
+      <h1> Lovely Pets Let's GO</h1></div>
       <div className={styles.list}>
         {showStudents()}
         

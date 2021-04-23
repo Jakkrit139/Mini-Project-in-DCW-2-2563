@@ -6,23 +6,28 @@
     justify-content: center;
     align-items: center;
     background-image: url(../img/register1.jpg); 
+    color: #cbcbd4;
+    font-style: normal;
+    
 }
 
 .content {
     min-width: 25vw;
+    color:#f5f1f1;
 }
 
 .gridContainer {
     display: grid;
     grid-template-columns: 100px auto;
     margin-bottom: 16px;
+    background-color: #000000;
 }
 
 .gridContainer>div {
     text-align: left;
     padding: 10px 0;
     font-size: 2.1 rem;
-    font-style: Fantasy ;
+    font-style:normal;
 }
 
 .gridContainer>div>input {
@@ -76,7 +81,7 @@
       border: 2px solid rgb(15, 177, 15);
   }
   .btn1{
-    background-color: brown;
+    background-color: rgb(141, 51, 51);
     border-radius: 10%;
     border: none;
     color: white;
@@ -143,10 +148,11 @@
   }
   
   .navbar {
-    font-size: 35px;
-    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-    border: 1px solid rgb(255, 255, 255);
-    padding-bottom: 10px;
+    font-size: 20px;  color: whitesmoke; font-style: inherit; 
+    background-image: linear-gradient(260deg, #3f3d3d 0%, #39393a 100%);
+    border: 0.5px solid rgb(300, 300, 300);
+    padding-bottom: 5px; margin: 20px;
+
   }
   
   .main-nav {

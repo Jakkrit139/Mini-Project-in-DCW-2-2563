@@ -7,7 +7,7 @@ import axios from 'axios'
 import config from '../config/config'
 
 export default function Register({ token }) {
-
+    
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -78,7 +78,7 @@ export default function Register({ token }) {
             </Head>
             <div className={styles.container}>
                 <Navbar />
-                <h1>Register</h1>
+                <h1>สมัครสมาชิก</h1>
                 <div><b>Token:</b> {token.substring(0, 15)}...
                 <button
                 className={styles.btn1}
@@ -95,7 +95,7 @@ export default function Register({ token }) {
 
                 <div>
                     <button className={styles.btn}
-                    onClick={register}>Register</button>
+                    onClick={register}>สมัครสมาชิก</button>
                 </div>
             </div>
         </Layout>

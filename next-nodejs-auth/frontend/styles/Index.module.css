@@ -7,16 +7,21 @@
     justify-content: center;
     align-items: center;
     background-image : url(../img/toys-3644073_1280.png);
+    
 }
 
 .title {
-    font-size: 4rem;
+    font-size: 2rem;
     margin-bottom: 30px;
     padding-top: 60px;
     padding-bottom: 40px;
     font-weight: bold;
-    color: rgb(150, 121, 151);
+    /* color:linear-gradient( 45deg, #ffa69e, #faf3dd, #b8f2e6, #aed9e0, #5e6472); */
+    /* background-image: linear-gradient(black, pink); */
+    /* background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); แก้ font ให้ตัว font ไล่สีได้และทำให้fontหยุดวิ่ง*/ 
+    
 }
+
 
 .list {
     display: flex;

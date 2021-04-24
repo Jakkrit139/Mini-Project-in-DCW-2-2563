@@ -47,7 +47,7 @@ const index = () => {
   return (
     <Layout>
        <Head>
-        <title>Home Page</title>
+        <title>Lovely Pets Let's GO</title>
     </Head>
     <div className={styles.container}><Navbar />
       <div className={styles.title}>

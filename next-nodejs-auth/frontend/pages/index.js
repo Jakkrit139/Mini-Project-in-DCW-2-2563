@@ -6,6 +6,8 @@ import React, { } from "react";
 import styles from "../styles/Index.module.css";
 import Navbar from "../components/navbar";
 import Footer from  "../components/footer";
+import { Container, Row, Col } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.css'
 const URL = "http://localhost/api/students";
 const URL_SEL = "http://localhost/api/purchase";
 const fetcher = (key) => fetch(key).then((res) => res.json());
@@ -24,6 +26,7 @@ const index = () => {
     if (data.list && data.list.length) {
       return data.list.map((item, index) => {
         return (
+          <Col className="col-lg-6 col-12">
           <div className={styles.listItem} key={index}>
             <div><b>ชื่อ:</b> {item.name}</div>
             <div><b>สายพันธ์ุ:</b> {item.species}</div>
@@ -37,7 +40,7 @@ const index = () => {
             >
               Select
             </button></div>
-          </div>
+          </div></Col>
         );
       });
     } else {
@@ -53,7 +56,7 @@ const index = () => {
       <div className={styles.title}>
       <h1> Lovely Pets Let's GO</h1></div>
       <div className={styles.list}>
-        {showStudents()}
+        <Row>{showStudents()}</Row>
         
       </div>
       <Footer />

@@ -1,12 +1,12 @@
 .container {
-    min-height: 100vh;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* min-height: 100vh;
+    padding: 0 0.5rem; */
+    display: flex; 
+    flex-direction: column; 
+    /* justify-content: center; */
     align-items: center;
     background-image: url(../img/pets-3715734_1280.jpg); 
-    -webkit-background-size: cover;
+    /* -webkit-background-size: cover;
     background-size: cover;
     width: 100vw;
     height: 110vh;
@@ -16,7 +16,11 @@
     padding-bottom: 40px;
     font-weight: bold;
     text-shadow: 5px 5px 5px #918b8bfd; 
-    
+     */
+     -webkit-background-size: cover;
+     background-size: cover; 
+     width: 100vw;
+     height: 100vh;
     
 }
 

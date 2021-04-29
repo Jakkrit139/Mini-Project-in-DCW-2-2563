@@ -59,6 +59,7 @@ const index = () => {
     </Head>
     <div className={styles.container}><Navbar />
       <div className={styles.title}>
+      <br></br>
       <h1> Lovely Pets Let's GO</h1></div>
       <div className={styles.list}>
         <Row>{showPets()}</Row>

@@ -1,23 +1,23 @@
 .container {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image : url(../img/pexels-tranmautritam-2215599.jpg); 
-    -webkit-background-size: cover;
-    background-size: cover;
+    /* width: auto;
+    height: auto;  */
+    /* margin: 0 auto; */
+     display: flex; 
+     flex-direction: column; 
+     /* justify-content: center;  */
+     align-items: center; 
+     background-image : url(../img/pexels-tranmautritam-2215599.jpg);  
+     -webkit-background-size: cover;
+    background-size: cover; 
     width: 100vw;
-    height: 110vh;
-    
+    height: 100vh;
+  
 }
 
 .title {
     font-size: 2rem;
     margin-bottom: 30px;
-    padding-top: 60px;
+    /* padding-top: 60px; */
     padding-bottom: 40px;
     font-weight: bold;
     text-shadow: 5px 5px 5px #46b830;   
@@ -30,25 +30,25 @@
 
 .list {
     display: flex;
-    margin: 10px;
+    /* margin: 10px; */
     background-color: rgb(213, 175, 214);
     background-image : url(../img/woman-3077180_1280.jpg);
 }
 
 .listItem {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; 
+    justify-content: center; 
     width:auto;
-    align-items: center;
+    /* align-items: center; */
     margin: 10px;
-    border: 4px solid rgb(64, 4, 119);
-    padding: 2rem;
-    border-radius: 5px;
-}
-.listItem > div{
-    margin: 5px 0px;
-}
+    /* border: 4px solid rgb(64, 4, 119); */
+    /* padding: 2rem; */
+    /* border-radius: 5px; */
+
+    
+} 
+
 .btn{
   background-color: red;
   border-radius: 10%;
@@ -78,3 +78,6 @@
     border: 2px solid brown;
 }
 
+  
+    
+ 

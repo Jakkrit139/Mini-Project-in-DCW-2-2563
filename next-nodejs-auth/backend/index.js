@@ -106,59 +106,61 @@ router.get("/", (req, res, next) => {
   res.send("Respond without authentication");
 });
 
-  let students = {
+  let pets = {
       list: [
-        { "id": 1, "name": "Jakkrit","species": "Krngkaijak","sex": "COE" ,"age": 2.25 },
-        { "id": 2, "name": "Adam","species": "Doloh","sex": "COE" ,"age": 2.19 }]
+        { "id": 1, "imgurl": "https://cdn.pixabay.com/photo/2017/05/08/16/26/france-2295805_960_720.jpg","name": "Jakkrit","species": "Krngkaijak","sex": "COE" ,"age": 2 },
+        { "id": 2, "imgurl": "","name": "Adam","species": "Doloh","sex": "COE" ,"age": 2 }]
     }
   
   
   router
-    .route("/students")
+    .route("/pets")
     .get((req, res) => {
-      res.send(students);
+      res.send(pets);
     })
     .post((req, res) => {
       console.log(req.body);
-      let newstudent = {};
-      newstudent.id = students.list.length ? students.list[students.list.length - 1].id + 1 : 1;
-      newstudent.name = req.body.name;
-      newstudent.species= req.body.species;
-      newstudent.sex = req.bodyx;
-      newdent.age= req.body.age;
-      students = { list: [...students.list, newstudent] };
-      res.json(students);
+      let newpet = {};
+      newpet.id = pets.list.length ? pets.list[pets.list.length - 1].id + 1 : 1;
+      newpet.imgurl = req.body.imgurl;
+      newpet.name = req.body.name;
+      newpet.species= req.body.species;
+      newpet.sex = req.body.sex;
+      newpet.age= req.body.age;
+      pets = { list: [...pets.list, newpet] };
+      res.json(pets);
     });
   
   router
-    .route("/students/:studentid")
+    .route("/pets/:petid")
     .get((req, res) => {
-      let id = students.list.findIndex((item) => +item.id == +req.params.studentid)
-      res.json(students.list[id]);
+      let id = pets.list.findIndex((item) => +item.id == +req.params.petid)
+      res.json(pets.list[id]);
     })
     .put((req, res) => {
-      let id = students.list.findIndex((item) => item.id == +req.params.studentid);
-      students.list[id].name = req.body.name;
-      students.list[id].species = req.body.species;
-      students.list[id].sex = req.bodyx;
-      stuts.list[id].age = req.body.age;
-      res.json(students.list);
+      let id = pets.list.findIndex((item) => item.id == +req.params.petid);
+      pets.list[id].imgurl = req.body.imgurl;
+      pets.list[id].name = req.body.name;
+      pets.list[id].species = req.body.species;
+      pets.list[id].sex = req.body.sex;
+      pets.list[id].age = req.body.age;
+      res.json(pets.list);
     })
     .delete((req, res) => {
-      students.list = students.list.filter((item) => +item.id !== +req.params.studentid);
-      res.json(students.list);
+      pets.list = pets.list.filter((item) => +item.id !== +req.params.petid);
+      res.json(pets.list);
     });
   
   
-  router.route("/purchase/:studentId")
+  router.route("/purchase/:petId")
   .post((req,res) => {
-    let id = students.list.findIndex((item) => +item.id == +req.params.studentId)
+    let id = pets.list.findIndex((item) => +item.id == +req.params.petId)
     if (id == -1) {
-      res.json({message: "Student not found"})
+      res.json({message: "Pet not found"})
     }
     else {
-      students.list = students.list.filter((item) => +item.id !== +req.params.studentId);
-      res.json(students.list);
+      pets.list = pets.list.filter((item) => +item.id !== +req.params.petId);
+      res.json(pets.list);
     }
   })
 

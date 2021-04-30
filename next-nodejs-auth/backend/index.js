@@ -108,8 +108,8 @@ router.get("/", (req, res, next) => {
 
   let pets = {
       list: [
-        { "id": 1, "imgurl": "https://cdn.pixabay.com/photo/2017/05/08/16/26/france-2295805_960_720.jpg","name": "Jakkrit","species": "Krngkaijak","sex": "COE" ,"age": 2 },
-        { "id": 2, "imgurl": "","name": "Adam","species": "Doloh","sex": "COE" ,"age": 2 }]
+        { "id": 1, "imgurl": "https://image.bestreview.asia/wp-content/uploads/2020/10/%E0%B9%81%E0%B8%A1%E0%B8%A7%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%E0%B8%A7%E0%B8%B4%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%A3%E0%B8%A1%E0%B8%B2%E0%B8%A8.jpg","name": "","species": "แมววิเชียรมาศ","sex": "เพศ เมีย" ,"age": 2 ,"detail":"แมววิเชียรมาศหรือที่เรียกกันในอดีตว่าแมวแก้ว โดยแมวชนิดนี้จะเรียกว่าเป็นแมวชั้นสูงก็ไม่ผิดครับ เพราะสามัญชนหรือคนธรรมดาทั่วไปในสมัยอยุธยาจะไม่สามารถเลี้ยงแมวสายพันธุ์นี้ได้ อีกทั้งมูลค่าแมวพันธุ์นี้ในอดีตก็เรียกได้ว่าสูงจนแทบจะเอื้อมไม่ถึงเลยก็ว่าได้"},
+        { "id": 2, "imgurl": "https://image.bestreview.asia/wp-content/uploads/2020/10/%E0%B9%81%E0%B8%A1%E0%B8%A7%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2.jpg","name": "","species": "แมวเปอร์เซีย","sex": "เพศ ผู้" ,"age": 2 ,"detail":"ต้นกำเนิดของน้องแมวสายพันธุ์นี้มาจากประเทศอิหร่านหรือแถบเปอร์เซีย ทั้งนี้ด้วยลักษณะของแมวเปอร์เซียที่มีความน่ารักและขนยาวสละสลวย มีความแตกต่างจากแมวในประเทศไทยทั่วไป "}]
     }
   
   
@@ -127,6 +127,7 @@ router.get("/", (req, res, next) => {
       newpet.species= req.body.species;
       newpet.sex = req.body.sex;
       newpet.age= req.body.age;
+      newpet.detail = req.body.detail;
       pets = { list: [...pets.list, newpet] };
       res.json(pets);
     });
@@ -144,6 +145,7 @@ router.get("/", (req, res, next) => {
       pets.list[id].species = req.body.species;
       pets.list[id].sex = req.body.sex;
       pets.list[id].age = req.body.age;
+      pets.list[id].detail = req.body.detail;
       res.json(pets.list);
     })
     .delete((req, res) => {

@@ -6,6 +6,7 @@ import Navbar from '../components/navbar'
 import axios from 'axios'
 import config from '../config/config'
 
+
 export default function Register({ token }) {
     
     const [username, setUsername] = useState('')
@@ -79,15 +80,8 @@ export default function Register({ token }) {
             <div className={styles.container}>
                 <Navbar /> 
                 <br></br>
-                <br></br>
-                <h1>สมัครสมาชิก</h1>
-                <div><b>Token:</b> {token.substring(0, 15)}...
-                <button
-                className={styles.btn1}
-                        onClick={() => { navigator.clipboard.writeText(token) }}>
-                        Copy token
-                </button>
-                </div>
+                <h1>Register </h1>
+               
                 <br />
              <b>Status: </b> <i>{status}</i>
                 <br /><br />
@@ -99,6 +93,7 @@ export default function Register({ token }) {
                     <button className={styles.btn}
                     onClick={register}>สมัครสมาชิก</button>
                 </div>
+                
             </div>
         </Layout>
     )

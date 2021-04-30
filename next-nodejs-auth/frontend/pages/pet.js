@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import styles from "../styles/student.module.css";
+import styles from "../styles/pet.module.css";
 import withAuth from "../components/withAuth";
 import Navbar from "../components/navbar";
 import Footer from  "../components/footer";
@@ -16,7 +16,8 @@ const admin = ({ token }) => {
   const [sex, setSex] = useState("");
   const [age, setAge] = useState(0);
   const [pet, setPet] = useState({});
-  const [imgurl, setImgurl] = useState( );
+  const [imgurl, setImgurl] = useState();
+  const [detail, setDetail] = useState() ;
  
 
   const handleChangeImage = e =>{
@@ -62,7 +63,8 @@ const admin = ({ token }) => {
       species,
       sex,
       age,
-      imgurl
+      imgurl,
+      detail
     });
     console.log(result);
     getPets();
@@ -79,7 +81,8 @@ const admin = ({ token }) => {
       species,
       sex,
       age,
-      imgurl
+      imgurl,
+      detail
     });
     console.log(result);
     getPets();
@@ -96,6 +99,7 @@ const admin = ({ token }) => {
             <b>Species:</b> {item.species} <br />
             <b>Sex:</b> {item.sex} <br />
             <b>Age:</b> {item.age}
+            <b>Detail:</b> {item.detail}
             <div className={styles.edit_button}>
               <button
                 className={styles.button_get}
@@ -126,9 +130,9 @@ const admin = ({ token }) => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <h1><ins>Data Edit </ins></h1>
+      <h1><ins>Cat review</ins></h1>
       <div className={styles.form_add}>
-        <h2>เพิ่ม</h2>
+        <h2>Cat review </h2>
         ชื่อ :
         <input
           type="text"
@@ -157,16 +161,22 @@ const admin = ({ token }) => {
           name="AGE"
           onChange={(e) => setAge(e.target.value)}
         ></input>
+        รายละเอียด:
+        <input
+          type="text"
+          name="detail"
+          onChange={(e) => setDetail(e.target.value)}
+        ></input>
         <button
           className={styles.button_add}
-          onClick={() => addPet(imgurl,name, species, sex, age)}
+          onClick={() => addPet(imgurl,name, species, sex, age, detail)}
         >
           Add
         </button>
       </div>
 
       <div className={styles.list}>{showPets()}</div>
-      <div className={styles.list1}><b><i><ins>(selected pet)</ins></i></b> <b>  Name:</b>{pet.name}<b>  Species:</b>{pet.species} <b>  Sex:</b>{pet.sex}  <b>Age:</b>{pet.age}</div>
+      <div className={styles.list1}><b><i><ins>(selected pet)</ins></i></b> <b>  Name:</b>{pet.name}<b>  Species:</b>{pet.species} <b>  Sex:</b>{pet.sex}  <b>Age:</b>{pet.age} <b>Detail:</b>{pet.detail}</div>
       <Footer />
     </div>
   );

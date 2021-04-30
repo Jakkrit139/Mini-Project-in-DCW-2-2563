@@ -28,13 +28,12 @@ const index = () => {
         return (
           <Col className="col-lg-12 col-12">
           <div className={styles.listItem} key={index}>
-            {/* <Image src = {item['imgurl']}  width="150" height = "150" /> */}
-          {/* <div><img src= {item.imgurl} ></img></div> */}
             <div><b>ชื่อ:</b> {item.name}</div>
             <div><b>สายพันธ์ุ:</b> {item.species}</div>
              <div> <b>เพศ:</b> {item.sex} </div>
             <div><b>อายุ:</b> {item.age}</div>
             <div><img src= {item.imgurl} ></img></div>
+            <div><b>detail:</b>{item.detail} </div>
 
 
             
@@ -65,7 +64,7 @@ const index = () => {
         <Row>{showPets()}</Row>
         
       </div>
-      <Footer />
+      
     </div>
     </Layout>
   );

@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import axios from "axios";
 import config from "../config/config";
 
+
 export default function Login({ token }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -73,18 +74,15 @@ export default function Login({ token }) {
       <div className={styles.container}>
         <Navbar />
         <h1>Login</h1>
-        <div>
-          <b>Token:</b> {token.substring(0, 15)}...
-          <button className={styles.btn1} onClick={copyText}> Copy token </button>
-        </div>
         <br />
-        <div>Status: {status}</div>
         <br />
         {loginForm()}
         <div>
           <button className={styles.btn2} onClick={login}>Login</button>
         </div>
+        
       </div>
+      
     </Layout>
   );
 }

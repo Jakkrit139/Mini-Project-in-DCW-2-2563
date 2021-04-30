@@ -1,16 +1,12 @@
 .container {
-    /* width: auto;
-    height: auto;  */
-    /* margin: 0 auto; */
      display: flex; 
      flex-direction: column; 
-     /* justify-content: center;  */
      align-items: center; 
      background-image : url(../img/pexels-tranmautritam-2215599.jpg);  
      -webkit-background-size: cover;
     background-size: cover; 
-    width: 100vw;
-    height: 100vh;
+    width: auto;
+    height: 150vh;
   
 }
 
@@ -21,9 +17,6 @@
     font-weight: bold;
     text-shadow: 5px 5px 5px #e2740e; 
     color: #f31414;  
-    /* color:linear-gradient( 45deg, #ffa69e, #faf3dd, #b8f2e6, #aed9e0, #5e6472); */
-    /* background-image: linear-gradient(black, pink); */
-    /* background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); แก้ font ให้ตัว font ไล่สีได้และทำให้fontหยุดวิ่ง*/ 
     
 }
 
@@ -42,16 +35,7 @@
     border: 2px solid rgb(22, 22, 22);
     font-size: 1.4rem;
     text-align: center;
-/* .listItem {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    width:auto;
-    align-items: center;
-    margin: 5px;
-    border: 1px solid rgb(64, 4, 119);
-    padding: 2rem;
-    /* border-radius: 5px;     */
+
 }  
 
 

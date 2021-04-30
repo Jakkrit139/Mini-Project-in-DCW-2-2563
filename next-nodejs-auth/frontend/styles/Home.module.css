@@ -1,29 +1,26 @@
 .container {
-    /* min-height: 100vh;
-    padding: 0 0.5rem; */
     display: flex; 
     flex-direction: column; 
-    /* justify-content: center; */
     align-items: center;
     background-image: url(../img/pets-3715734_1280.jpg); 
-    /* -webkit-background-size: cover;
-    background-size: cover;
-    width: 100vw;
-    height: 110vh;
-    color: #141414;
-    font-style: normal;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    font-weight: bold;
-    text-shadow: 5px 5px 5px #918b8bfd; 
-     */
      -webkit-background-size: cover;
      background-size: cover; 
-     width: 100vw;
-     height: 100vh;
-    
+     width: auto;
+     height: 110vh;
 }
 
+.box {
+    text-align: left;
+    background-color: antiquewhite;
+    padding: 10px 0;
+    font-size: 2.1 rem;
+    font-style:normal;
+    border: 2px solid rgb(43, 43, 43);
+    box-shadow: 10px 10px 5px #888888;
+    width: 1000px;
+    height: auto;
+    
+}
 .content {
     min-width: 25vw;
     color:#f5f1f1;
@@ -33,7 +30,7 @@
     display: grid;
     grid-template-columns: 100px auto;
     margin-bottom: 16px;
-    background-color: #000000;
+    background-color: #4b4a4a;
     border-radius:5px; 
     
 }
@@ -152,11 +149,6 @@
       border: 2px solid rgb(10, 152, 192);
   }
   
-   /* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  } */
   
   .body {
     font-family: "Josefin Sans", sans-serif;
@@ -164,13 +156,19 @@
   
   
   .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: rgb(82, 76, 76);
     color: white;
-    text-align: center;
   } 
+  .text_left {
+    font-size:25px;
+    padding-left:40px;
+    float:left;
+    word-spacing:20px;
+    color: aliceblue;
+    
+  }
  
   
